@@ -11,6 +11,7 @@ import (
 func partOne() (int, error) {
 
 	file, err := os.Open("./input.txt")
+	defer file.Close()
 	if err != nil {
 		return -1, err
 	}
@@ -53,6 +54,7 @@ func partOne() (int, error) {
 func partTwo() (int, error) {
 
 	file, err := os.Open("./input.txt")
+	defer file.Close()
 	if err != nil {
 		return -1, err
 	}
