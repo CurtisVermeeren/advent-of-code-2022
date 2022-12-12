@@ -21,7 +21,6 @@ func partOne() (string, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	fileScanner.Scan()
 	/*
@@ -88,7 +87,6 @@ func partTwo() (string, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	fileScanner.Scan()
 	/*
@@ -120,12 +118,13 @@ func partTwo() (string, error) {
 		from--
 		to--
 
-		// Select the "numberMoved" containers from the slice in order
+		// Select the "numberMoved" containers from the end of the slice in order
 		itemsMoved := stacks[from][len(stacks[from])-numberMoved:]
-		// Remove the containers from the end of "from" stack
+		// Remove the containers from the end of "from" slice
 		stacks[from] = stacks[from][:len(stacks[from])-numberMoved]
-		// Append the containers to the end of "to" stack
-		stacks[to] = append(stacks[to], itemsMoved...)
+		// Append the containers to the end of "to" slice
+		stacks[to] = append(stacks[to], make([]rune, numberMoved)...)
+		copy(stacks[to][len(stacks[to])-numberMoved:], itemsMoved)
 
 	}
 

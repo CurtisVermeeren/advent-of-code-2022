@@ -16,7 +16,6 @@ func partOne() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	maxCalories := 0
 	currentElfCalories := 0
@@ -37,10 +36,6 @@ func partOne() (int, error) {
 		}
 
 	}
-	err = file.Close()
-	if err != nil {
-		return -1, err
-	}
 
 	return maxCalories, nil
 }
@@ -53,7 +48,6 @@ func partTwo() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	// maxCalories1 is the most
 	maxCalories1 := 0
@@ -87,10 +81,6 @@ func partTwo() (int, error) {
 			currentElfCalories += cal
 		}
 
-	}
-	err = file.Close()
-	if err != nil {
-		return -1, err
 	}
 
 	return maxCalories1 + maxCalories2 + maxCalories3, nil

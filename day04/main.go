@@ -16,7 +16,6 @@ func partOne() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	// Track the number of pairs where one range contains the other
 	totalContains := 0
@@ -46,7 +45,6 @@ func partTwo() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	// Track the number of pairs where one range partially or fully contains the other
 	totalContains := 0

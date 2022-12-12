@@ -39,7 +39,6 @@ func partOne() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	totalScore := 0
 
@@ -84,7 +83,6 @@ func partTwo() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	totalScore := 0
 

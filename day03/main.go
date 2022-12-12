@@ -17,7 +17,6 @@ func partOne() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	// The part 1 solution is the total item priority
 	var sumPriority int
@@ -60,7 +59,6 @@ func partTwo() (int, error) {
 	}
 
 	fileScanner := bufio.NewScanner(file)
-	fileScanner.Split(bufio.ScanLines)
 
 	// The part 2 solution is the total item priority
 	var sumPriority int
