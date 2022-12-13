@@ -158,7 +158,7 @@ func partTwo() (int, error) {
 	forest is the forest structure built from the input file.
 	i and j are the current coordinates of the location being checked.
 	location is the height of the tree at the potential location for the tree house
-	firtRec is a bool that checks if the current recursion is the first to prevent the starting point forest[i][j] = location from being true.
+	firtRec is a bool that checks if the current recursion is the first to prevent the starting Pair forest[i][j] = location from being true.
 */
 
 func calcUp(forest [][]rune, i, j int, location rune, firstRec bool) int {
